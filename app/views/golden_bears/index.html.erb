@@ -1,6 +1,14 @@
+<h1>My Bears</h1>
 <ul>
   <% @bears.each do |bear| %>
-  <li><%= link_to bear.name, bear%> </li>
+  <div class="container">
+    <li><%= link_to "#{bear.name} HTML", bear%> </li>
+    <li><%= link_to "#{bear.name} JS with jQuery", bear, {class: 'jquery-link'}%> </li>
+    <li><%= link_to "#{bear.name} JS with data-remote", bear, remote: true%> </li>
+    <div class=ajax-area id=ajax-area-<%=bear.id%>>
+    </div>
+  <div>
+  <span>*****************************</span>
   <% end %>
 </ul>
 

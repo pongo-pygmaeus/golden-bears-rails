@@ -2,10 +2,7 @@
 <ul>
   <% @fish.each do |fishy| %>
   <li><%= link_to fishy.name, golden_bear_fish_path(@bear, fishy) %> </li>
-  <li><%= link_to fishy.name, golden_bear_fish_path(@bear, fishy), remote: true %> </li>
-  <li><%= link_to fishy.name, golden_bear_fish_path(@bear, fishy, {format: :json}) %> </li>
   <% end %>
 </ul>
-
 <div id="fish-div">
 </div>
